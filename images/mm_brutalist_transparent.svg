@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
+<title id="title">MM brutalist monogram</title>
+<desc id="desc">Two angular interlocking concrete letters M on a transparent background.</desc>
+<defs>
+  <linearGradient id="concrete" x1="0" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#eeeeea"/>
+    <stop offset="0.55" stop-color="#bcbcb8"/>
+    <stop offset="1" stop-color="#81817f"/>
+  </linearGradient>
+  <filter id="grain" x="-10%" y="-10%" width="120%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.48" numOctaves="3" seed="7" result="noise"/>
+    <feColorMatrix in="noise" type="saturate" values="0" result="gray"/>
+    <feBlend in="SourceGraphic" in2="gray" mode="multiply"/>
+  </filter>
+</defs>
+<!-- heavy architectural extruded shadows -->
+<path d="M100 295 V105 H170 L255 188 L340 105 H410 V295 H344 V197 L255 279 L166 197 V295Z" fill="#393939" transform="translate(13 17)"/>
+<path d="M370 315 V125 H440 L525 208 L610 125 H680 V315 H614 V217 L525 299 L436 217 V315Z" fill="#292929" transform="translate(13 14)"/>
+<!-- front faces -->
+<path d="M100 295 V105 H170 L255 188 L340 105 H410 V295 H344 V197 L255 279 L166 197 V295Z" fill="url(#concrete)"/>
+<path d="M370 315 V125 H440 L525 208 L610 125 H680 V315 H614 V217 L525 299 L436 217 V315Z" fill="url(#concrete)"/>
+<!-- angular architectural shade facets -->
+<path d="M100 105 L166 197 V295 H100Z M340 105 L344 197 V295 H410 V105Z" fill="#555555" opacity=".28"/>
+<path d="M370 125 L436 217 V315 H370Z M610 125 L614 217 V315 H680 V125Z" fill="#444" opacity=".3"/>
+<!-- fine rough concrete speckle overlay clipped to letters -->
+<defs><clipPath id="letters"><path d="M100 295 V105 H170 L255 188 L340 105 H410 V295 H344 V197 L255 279 L166 197 V295Z M370 315 V125 H440 L525 208 L610 125 H680 V315 H614 V217 L525 299 L436 217 V315Z"/></clipPath></defs>
+<g clip-path="url(#letters)" opacity=".14" filter="url(#grain)"><rect x="90" y="90" width="610" height="250" fill="#b4b4b4"/></g>
+</svg>
